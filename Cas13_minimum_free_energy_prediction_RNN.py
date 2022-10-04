@@ -132,7 +132,7 @@ is {best_hps.get('learning_rate')}.
 """)
 
 
-#built the model with the optical hyperparameters and train it on the data for 100 epochs
+#built the model with the optimal hyperparameters and train it on the data for 100 epochs
 model = tuner.hypermodel.build(best_hps)
 history = model.fit(x_train, y_train, epochs=100, validation_split=0.2)
 val_acc_per_epoch = history.history['val_loss']
